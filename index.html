@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jianchun-chen by Lexie-Chen</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jianchun-chen</h1>
+        <p>This is my portfolio.</p>
+
+        <p class="view"><a href="https://github.com/Lexie-Chen/Jianchun-Chen">View the Project on GitHub <small>Lexie-Chen/Jianchun-Chen</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Lexie-Chen/Jianchun-Chen/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Lexie-Chen/Jianchun-Chen/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Lexie-Chen/Jianchun-Chen">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="interactive-map-of-another-china-you-may-not-know" class="anchor" href="#interactive-map-of-another-china-you-may-not-know" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interactive Map of Another China You May Not Know</h1>
+
+<ul>
+<li>Collected and edited news stories of the lming of Another China You May Not Know</li>
+<li>Facilitated storytelling and design of interactive map using HTML5, CSS</li>
+</ul>
+
+<p><a href="http://hudong.jstv.com/ucmap/defaultNew.aspx">http://hudong.jstv.com/ucmap/defaultNew.aspx</a></p>
+
+<p>'&lt;!DOCTYPE html&gt;
+
+</p>
+    
+    地图
+
+<p>&lt;%--   --%&gt;<br>
+    
+       </p>
+
+<pre><code>&lt;style type="text/css"&gt;
+    .infoBoxContent{font-size:12px;}
+    .infoBoxContent .title{background:url(title.jpg) no-repeat;height:42px;width:272px;}
+    .infoBoxContent .title strong{font-size:14px;line-height:42px;padding:0 10px 0 5px;}
+    .infoBoxContent .title .price{color:#FFFF00;}
+    .infoBoxContent .list{width:268px;border:solid 1px #4FA5FC;border-top:none;background:#fff;height:260px;}
+    .infoBoxContent .list ul{margin:0;padding:5px;list-style:none;}
+    .infoBoxContent .list ul li {float:left;width:255px;border-bottom:solid 1px #4FA5FC;padding:2px 0;}
+    .infoBoxContent .list ul .last{border:none;}
+    .infoBoxContent .list ul img{width:53px;height:42px;margin-right:5px;}
+    .infoBoxContent .list ul p{padding:0;margin:0;}
+    .infoBoxContent .left{float:left;}
+    .infoBoxContent .rmb{float:right;color:#EB6100;font-size:14px;font-weight:bold;}
+    .infoBoxContent a{color:#0041D9;text-decoration:none;}
+&lt;/style&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(function () {
+        $(".tab li").click(function () {
+            $(".tab li").removeClass("tab_cur");
+            $(this).attr("class", "tab_cur");
+            var index = $(".tab li").index($(this));
+            $(".search_rlt").css("display", "none");
+            $(".search_rlt")[index].style.display = "block";
+        });
+
+    })
+&lt;/script&gt;
+</code></pre>
+
+<p>
+</p>
+    
+
+<pre><code>    &lt;div id="content"&gt;
+        &lt;div class="wrapper"&gt;
+            &lt;div class="trip"&gt;
+                &lt;div class="trip_title"&gt;&lt;span&gt;独家路线感受独特中国魅力&lt;/span&gt;&lt;/div&gt;
+                &lt;div class="trip_cont"&gt;
+                    &lt;div class="trip_l"&gt;
+                        &lt;ul class="tab"&gt;
+                            &lt;%--&lt;li id="tab_1" class="tab_cur"&gt;全部&lt;/li&gt;--%&gt;
+                            &lt;li id="tab_1" class="tab_cur"&gt;独家路线&lt;/li&gt;
+                            &lt;li id="tab_2"&gt;行走进程&lt;/li&gt;
+                            &lt;li id="tab_4"&gt;&amp;nbsp;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;input id="search" type="search" placeholder="搜索目的地关键字" onfocus="searchFocus()" onblur="searchOut()"  onkeydown="if(event.keyCode == 13){return false;}else{searchKeyDown()}"  /&gt;
+
+                        &lt;%--&lt;ul class="search_rlt" style="display: block"&gt;
+                            &lt;%                                                                                                          
+                                for (int i = 0; i &lt; AllList.Count; i++)
+                                {
+                                    var item = AllList[i]; %&gt;                                
+                            &lt;li&gt;
+                                &lt;a href="#" onclick='showcurrentmark(&lt;%=item.ID %&gt;);' &gt;
+                                &lt;h1&gt;&lt;%=(i+1).ToString() + "." + item.Title %&gt;&lt;/h1&gt;
+                                &lt;span&gt;&lt;%=item.LocationString %&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;%} %&gt;
+                        &lt;/ul&gt;--%&gt;
+                        &lt;ul class="search_rlt" style="display: block"&gt;
+                            &lt;%for (int i = 0; i &lt; Type1List.Count; i++)
+                                {
+                                    var item = Type1List[i]; %&gt;                                
+                            &lt;li&gt;
+                                &lt;a href="#" onclick='showcurrentmark(&lt;%=item.ID %&gt;);' &gt;
+                                &lt;h1&gt;&lt;%=(i+1).ToString() + "." + item.Title %&gt;&lt;/h1&gt;
+                                &lt;span&gt;&lt;%=item.LocationString %&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;%} %&gt;                                
+                        &lt;/ul&gt;
+                        &lt;ul class="search_rlt"&gt;
+                            &lt;%for (int i = 0; i &lt; Type2List.Count; i++)
+                                {
+                                    var item = Type2List[i]; %&gt;                               
+                            &lt;li&gt;
+                                &lt;div class="xzjc"&gt;
+                                    &lt;a href="#" onclick='showcurrentmark(&lt;%=item.ID %&gt;);' &gt;
+                                        &lt;h1&gt;&lt;%=(i+1).ToString() + "." + item.Title %&gt;&lt;/h1&gt;
+                                        &lt;h2 style='&lt;%= (item.CollectState == 1)? @"color:#999999" : ((item.CollectState &gt; 1 &amp;&amp; item.CollectState &lt; 5)?@"color:#587eb3" :((item.CollectState == 5 )?@"color:#d93736":"" ))  %&gt;'&gt;
+                                            &lt;%= (item.CollectState == 1)? "蓄势待发" : ((item.CollectState &gt; 1 &amp;&amp; item.CollectState &lt; 5)?"正在途中" :((item.CollectState == 5 )?"拍摄完成":"" ))  %&gt;
+                                        &lt;/h2&gt;                                          
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="jd"&gt;&lt;img src='&lt;%= (item.CollectState == 1)? @"images/0.gif" : ((item.CollectState == 2)?@"images/30.gif" :(item.CollectState==3)?@"images/60.gif":(item.CollectState==4)?@"images/90.gif":((item.CollectState == 5 )?@"images/100.gif":"" ))  %&gt;'&gt;&lt;/div&gt;        
+                            &lt;/li&gt;
+                            &lt;%} %&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div id="map" class="trip_r"&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;       
+
+    &lt;script type="text/javascript"&gt;
+        var markerlist;
+        var marker = new Array();
+        var windowarray = new Array();
+        var map;
+        map = new BMap.Map('map');
+        //var mapStyle = { style: "googlelite" }
+        //map.setMapStyle(mapStyle);
+        var startpoi = new BMap.Point(106.99882, 37.728137);
+        map.centerAndZoom(startpoi, 5);
+        map.enableScrollWheelZoom();
+
+        $.post('GetAllMark.aspx', function (data) {
+            markerlist = data.List;
+            if (data.Success) {
+                for (var i = 0; i &lt; data.List.length; i++) {
+                    var poi = new BMap.Point(data.List[i].Logitude, data.List[i].Latitude);
+                    var icon;
+                    icon = new BMap.Icon("Http://hudongstatic.jstv.com/ChinaImage2014Map/icon.png", new BMap.Size(27, 38));
+                    if (data.List[i].SpotType == 1) {                            
+                        var html = "&lt;div class='trip_hint'&gt;&lt;img src='" + data.List[i].ImageUrl + "' alt='' /&gt;&lt;h1&gt;" + data.List[i].Title + "&lt;/h1&gt;&lt;p&gt;" + data.List[i].Description + "&lt;/p&gt;&lt;a href='" + data.List[i].LinkUrl + "' target='_blank'&gt;查看详情&lt;/a&gt;&lt;/div&gt;";
+                        var infoWindow = new BMap.InfoWindow(html, { enableMessage: false, enableCloseOnClick: false, enableAutoPan: true });
+                        windowarray[i] = infoWindow;
+
+                        marker[i] = new BMap.Marker(poi, { icon: icon });
+                        map.addOverlay(marker[i]);
+
+                        mclick(marker[i], infoWindow)
+                    }
+                    else {
+                        marker[i] = new BMap.Marker(poi, { icon: icon });
+                        //map.addOverlay(marker[i]);
+                    }
+                }
+                //var markerClusterer = new BMapLib.MarkerClusterer(map, { markers: marker });
+            }
+        }, 'json');
+
+        function mclick(m, w) {
+            m.addEventListener('click', function (e) {
+                this.openInfoWindow(w);
+            })
+        }
+
+        function showcurrentmark(id) {
+            for (var i = 0; i &lt; markerlist.length; i++) {
+                if (markerlist[i].ID == id) {
+                    var poi = new BMap.Point(markerlist[i].Logitude, markerlist[i].Latitude);
+                    if (markerlist[i].SpotType == 1) {
+                        for (var j = 0; j &lt; marker.length; j++) {
+
+                            if (marker[j].getPosition().lng == poi.lng &amp;&amp; marker[j].getPosition().lat == poi.lat) {
+                                marker[j].openInfoWindow(windowarray[j])
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    else {
+                        map.centerAndZoom(poi, markerlist[i].Zoom);
+                    }
+                }
+            }
+        }
+
+        var searchTimeTag = null;
+        var shouldpost = false;
+        function searchFocus() {
+            searchTimeTag = setInterval(getSearch, 1500);
+        }
+        function searchOut() {
+            clearInterval(searchTimeTag);
+        }
+        function searchKeyDown(e) {
+            shouldpost = true;
+        }
+
+        function getSearch(searchTimeTag) {
+            if (shouldpost == true) {
+                shouldpost = false;
+                var keyword = $('#search').val();
+                var cur_ul = $('.search_rlt').eq(parseInt($('.tab_cur').attr('id').split('_')[1]) - 1);
+                if (keyword != "") {
+                    $.each(cur_ul.find('li'), function (i) {
+                        //alert(cur_ul.find('li').eq(i).find('h1').text())
+                        if (parseInt($('.tab_cur').attr('id').split('_')[1]) - 1 == 0) {
+                            if (cur_ul.find('li').eq(i).find('h1').text().indexOf(keyword) != -1) {
+                                cur_ul.find('li').eq(i).show()
+                            }
+                            else {
+                                cur_ul.find('li').eq(i).hide();
+                            }
+                        }
+                        else {
+                            if (cur_ul.find('li').eq(i).find('div').find('a').find('h1').text().indexOf(keyword) != -1) {
+                                cur_ul.find('li').eq(i).show()
+                            }
+                            else {
+                                cur_ul.find('li').eq(i).hide();
+                            }
+                        }
+
+                    })
+                }
+                else {
+                    cur_ul.find('li').show();
+                }
+            }
+        }
+
+    &lt;/script&gt;
+
+&lt;/form&gt;
+</code></pre>
+
+<p>
+
+'</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Lexie-Chen">Lexie-Chen</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
